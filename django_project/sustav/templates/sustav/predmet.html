@@ -1,0 +1,12 @@
+{% extends "sustav/base.html" %}
+{% block content %}
+    <h3>Naziv: {{ predmet.ime }}</h3>
+    <h4>Kod: {{ predmet.kod }}</h4>
+    <h5>Program: {{ predmet.program }}</h5>
+    <h5>Bodovi: {{ predmet.bodovi }} ECTS</h5>
+    <h5>Izborni: {{ predmet.izborni }}</h5>
+    <h5>Semestar redovni: {{ predmet.sem_redovni }}</h5>
+    <h5>Semestar izvanredni: {{ predmet.sem_izvanredni }}</h5>
+
+    <a href="{% url 'Sustav-Courses' %}">Natrag</a>
+{% endblock content %}

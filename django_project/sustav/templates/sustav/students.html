@@ -1,0 +1,9 @@
+{% extends "sustav/base.html" %}
+{% block content %}
+    <h1>Lista studenata:</h1>
+    {% for korisnik in content %}
+        {% if korisnik.role != "Mentor" %}
+            {{korisnik.username}} &nbsp;{{ korisnik.email }} &nbsp; <a class="btn btn-outline-secondary" href="/studentEdit/{{ korisnik }}">Upisni List</a>   <br>
+        {% endif %}
+    {% endfor %}
+{% endblock content %}

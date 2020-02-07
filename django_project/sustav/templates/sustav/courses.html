@@ -1,0 +1,7 @@
+{% extends "sustav/base.html" %}
+{% block content %}
+    <h1>Lista predmeta:</h1>
+    {% for predmet in content %}
+        {{ predmet.ime }} ({{ predmet.kod }}) &nbsp; <a class="btn btn-outline-secondary" href="/predmet/{{ predmet }}">Details</a> &nbsp; <a class="btn btn-outline-secondary" href="/predmetEdit/{{ predmet }}">Edit</a>   <br>
+    {% endfor %}
+{% endblock content %}
